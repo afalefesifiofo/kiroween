@@ -1,0 +1,14 @@
+{
+  "name": "Clippy Auto-Assist",
+  "description": "Automatically triggers Clippy suggestions based on file type and activity",
+  "trigger": "onFileSave",
+  "conditions": {
+    "filePattern": "*.{md,txt,jsx,js,ts,tsx}"
+  },
+  "action": {
+    "type": "agent",
+    "agent": "clippy-2.0",
+    "prompt": "Analyze the saved file and provide contextual suggestions based on current Clippy mode"
+  },
+  "enabled": true
+}
